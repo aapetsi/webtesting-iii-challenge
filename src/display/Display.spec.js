@@ -17,4 +17,12 @@ describe('Dashboard component', () => {
   test('matches the snapshot!', () => {
     expect(wrapper.container).toMatchSnapshot()
   })
+
+  test('should show unlocked state', () => {
+    expect(wrapper.queryByText(/unlock/i)).toBeInTheDocument()
+  })
+
+  test('should show opened state', () => {
+    expect(wrapper.queryByText(/open/i)).toBeInTheDocument()
+  })
 })
