@@ -17,4 +17,12 @@ describe('Dashboard component', () => {
   test('matches the snapshot!', () => {
     expect(wrapper.container).toMatchSnapshot()
   })
+
+  test('should show close gate button', () => {
+    expect(wrapper.queryByText(/close gate/i)).toBeInTheDocument()
+  })
+
+  test('should show lock gate button', () => {
+    expect(wrapper.queryByText(/lock gate/i)).toBeInTheDocument()
+  })
 })
